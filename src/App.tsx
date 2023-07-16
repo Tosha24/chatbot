@@ -1,12 +1,14 @@
-import { Suspense, lazy } from "react";
-import { AnimatePresence } from "framer-motion";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import Demo from "./page/Demo";
-import ChatBotComp from "./page/ChatBot";
 
-const Chat = lazy(() => import("./page/Chat"));
-const Success = lazy(() => import("./page/Success"));
-const NotFound = lazy(() => import("./page/404"));
+import {  Route, Routes} from "react-router-dom";
+
+import ChatBotComp from "./page/ChatBot";
+import Chat from "./page/Chat";
+import Success from "./page/Success";
+import NotFound from "./page/404";
+
+// const Chat = lazy(() => import("./page/Chat"));
+// const Success = lazy(() => import("./page/Success"));
+// const NotFound = lazy(() => import("./page/404"));
 
 
 const App = () => {
@@ -17,7 +19,7 @@ const App = () => {
           <Route path="/success" element={<Success />} />
           <Route path= "/chat" element={<ChatBotComp />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/demo" element={<Demo />} />
+          
         </Routes>
     </>
   );

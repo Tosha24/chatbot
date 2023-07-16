@@ -28,7 +28,7 @@ const ChatBotComp = () => {
   }, [count, dispatch, navigate]);
   return (
    
-   <div className='relative flex flex-col justify-center align-middle w-full h-screen'>
+   <div className=' flex flex-col justify-center items-center w-full min-h-[100vh]  '>
       <Chatbot
         config={config}
         messageParser={MessageParser}
